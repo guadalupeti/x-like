@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <p>
+            <a href = "/login">Login</a> <a href = "/register">Register</a> <a href = "/post">Post</a>
+        </p>
+    </header>
+    Hello, {{ user.username }}
+    {% for post in posts %}
+    <h4>
+        <img src = "{{ post.author.profile_pic.url }}" width = "50px"> {{ post.author }}
+    </h4>
+        {{ post.text }}
+        <p>
+            {{ post.creation_date }}
+        </p>
+    {% endfor %}
+</body>
+</html>
